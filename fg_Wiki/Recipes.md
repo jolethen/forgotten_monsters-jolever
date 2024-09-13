@@ -70,6 +70,26 @@
 [ ] [ Spectrum Orb ] [ ]
 
 
+---
+-- Crumpled Paper
+[ ] [ Group Leaves ] [ ]
+
+[ ] [ Group Leaves ] [ ]
+
+[ ] [ Group Leaves ] [ ]
+
+
+
+-- Forgotten Book
+[ Crumpled Paper ] [ Crumpled Paper ] [ Crumpled Paper ]
+
+[ Crumpled Paper ] [ Crumpled Paper ] [ Crumpled Paper ]
+
+[ Crumpled Paper ] [ Crumpled Paper ] [ Crumpled Paper ]
+
+
+---
+
 -- Spectrum Orb Block
 [ Spectrum Orb ] [ Spectrum Orb ] [ Spectrum Orb ]
 
@@ -77,29 +97,32 @@
 
 [ Spectrum Orb ] [ Spectrum Orb ] [ Spectrum Orb ]
 
+
 ---
--- Summon Golem
-[ Group Stone ] [ Group Stone ] [ Group Stone ]
-
-[ Group Stone ] [ Spectrum Orb Block ] [ Group Stone ]
-
-[ Group Stone ] [ Group Stone ] [ Group Stone ]
-
 
 -- Summon Mese Lord
-[ Group Stone ] [ Spectrum Orb Block ] [ Group Stone ]
+[ Forgotten Book ] [ Forgotten Book ] [ Forgotten Book ]
 
-[ Spectrum Orb Block ] [ Heart of Mese ] [ Spectrum Orb Block ]
+[ Spectrum Orb Block ] [ Spectrum Orb Block ] [ Forgotten Book ]
 
-[ Group Stone ] [ Spectrum Orb Block ] [ Group Stone ]
+[ Forgotten Book ] [ Forgotten Book ] [ Forgotten Book ]
+
+
+-- Summon Golem
+[ Forgotten Book ] [ Spectrum Orb Block ] [ Forgotten Book ]
+
+[ Forgotten Book ] [ Heart of Mese ] [ Forgotten Book ]
+
+[ Forgotten Book ] [ Spectrum Orb Block ] [ Forgotten Book ]
+
 
 
 -- Summon Skull King
-[ Group Stone ] [ Buried Bone Block ] [ Group Stone ]
+[ Forgotten Book ] [ Buried Bone Block ] [ Forgotten Book]
 
 [ Buried Bone Block ] [ Eye of the Lord ] [ Buried Bone Block ]
 
-[ Group Stone ] [ Buried Bone Block ] [ Group Stone ]
+[ Forgotten Book] [ Buried Bone Block ] [ Forgotten Book ]
 
 
 ---

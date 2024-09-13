@@ -77,7 +77,7 @@ if minetest.get_modpath("3d_armor") then
 
 	
 
-end
+
 
 
 minetest.register_craft({
@@ -89,7 +89,7 @@ minetest.register_craft({
   }
 })
 
---forgotten_monsters:bone
+
 
 minetest.register_craft({
   output = "forgotten_monsters:chestplate_bones",
@@ -127,6 +127,44 @@ minetest.register_craft({
     {"forgotten_monsters:bone","forgotten_monsters:bone","forgotten_monsters:bone"},
     {"","forgotten_monsters:bone",""}
   }
+})
+
+
+end
+
+
+
+
+-- CARNE DE GROWLER ===========================================================================================
+
+minetest.register_craftitem("forgotten_monsters:growler_meat_raw", {
+    description = "Growler Meat Raw",
+    inventory_image = "growler_meat_raw.png",
+    on_use = minetest.item_eat(-5),
+})
+
+minetest.register_craftitem("forgotten_monsters:growler_meat", {
+    description = "Growler Meat",
+    inventory_image = "growler_meat.png",
+    on_use = minetest.item_eat(5),
+})
+
+
+minetest.register_craft({
+	output = "forgotten_monsters:growler_meat",
+	type = "cooking",
+	recipe = "forgotten_monsters:growler_meat_raw",
+	cooktime = 4
+})
+
+
+-- FOLHA  HUNGRY : ===============================================================================================
+
+minetest.register_craftitem("forgotten_monsters:hungry_sheet", {
+    description = "Hungry Sheet",
+    inventory_image = "folha.png",
+
+
 })
 
 
@@ -424,6 +462,228 @@ minetest.register_craftitem("forgotten_monsters:healing", {
 })
 
 
+-- BOOK : =======================================================================================================
+minetest.register_craftitem("forgotten_monsters:aged_bottle", {
+    description = "Aged Bottle",
+    inventory_image = "old_bottle.png",
+ 
+	
+})
+
+
+-- crumpled paper ===============================================================================================
+
+minetest.register_craftitem("forgotten_monsters:crumpled_paper", {
+    description = "Crumpled Paper",
+    inventory_image = "old_bottle.png",
+ 
+	
+})
+
+
+-- BOOK : ======================================================================================================= Livro
+
+local book_txt = [[
+
+Welcome to your new journey,
+of adventures, explorations and battles.
+Become as strong as possible, create summoning books
+and defeat the bosses.
+The bosses, Golem and Mese Lord, drop useful items
+for the recipes of the books.
+
+Have fun!!!
+]]
+
+minetest.register_craftitem("forgotten_monsters:fgbook", {
+    description = "Forgotten Book",
+    inventory_image = "forgotten_book.png",
+    stack_max = 1,
+    groups = {vessel = 1},
+    
+    on_use = function(itemstack, user, pointed_thing, pos)
+        local player_name = user:get_player_name()
+        
+        local formspec_book = "size[8,9]"..
+            "label[0.5,2;"..book_txt.."!]"..
+            "background[1,2;6,4;paper.png;true]"..
+            "button_url[3,8;2,2;wiki;Wiki;https://codeberg.org/pixelzone/forgotten_monsters_reworked/src/branch/main/README.md]"
+      
+        
+        minetest.show_formspec(player_name, "forgotten_monsters:fgbook", formspec_book)
+        return itemstack
+    end
+})
+
+
+
+-- letter from the queen : ======================================================================================= Carta
+
+local letter_label = [[ 
+
+                                                   							My dear,
+
+	I write to you from Ethreal, where the cold chills to the bone. 
+	The wind howls through the endless nights, and the ice blankets the fields like a white,
+	silent shroud. I feel a deep longing for your arms, for your presence beside me.
+
+	I hope, with all my heart, that we will see each other again soon. 
+	Until then, I hold on to my memories of you as a treasure that warms me on the coldest nights.
+
+		                                      		 					love and longing,
+		                                          			         Your Queen.
+
+
+]]
+
+
+minetest.register_craftitem("forgotten_monsters:letter_queen", {
+    description = "Letter from the Queen",
+    inventory_image = "letter_queen.png",
+    stack_max = 1,
+    groups = {vessel = 1},
+    
+    on_use = function(itemstack, user, pointed_thing, pos)
+        local player_name = user:get_player_name()
+        
+        local formspec_letter = "size[9.2,6]"..          
+            "label[0.1,0.2;"..letter_label.."]"..
+            "background[1,2;6,4;paper.png;true]"
+        
+       
+        minetest.show_formspec(player_name, "forgotten_monsters:letter", formspec_letter)
+        --return itemstack
+    end
+})
+
+
+
+
+
+--- CORAÇÃO DE MESE : =============================================================================================
+minetest.register_craftitem("forgotten_monsters:heart_of_mese", {
+    description = "Heart of Mese",
+    inventory_image = "heart_of_mese.png",
+ 	
+})
+
+
+--- LIVRO DE INVOCÃO : ===========================================================================================
+
+minetest.register_craftitem("forgotten_monsters:summon_mese_lord", {
+    description = "Meze Lord's Summoning Book",
+    inventory_image = "summon_boock_meselord.png", 
+
+    on_place = function(itemstack, placer, pointed_thing)
+        
+        if pointed_thing.type == "node" then
+            local pos = pointed_thing.above 
+    	    
+    	     local summon_pos = {x = pos.x, y = pos.y + 1, z = pos.z}
+    	      
+             minetest.add_entity(summon_pos, "forgotten_monsters:meselord")
+             
+               -- PARTICULAS
+		minetest.add_particlespawner({
+		    amount = 30,
+		    time = 0.5,
+		    minpos = summon_pos,
+		    maxpos = summon_pos,
+		    minvel = {x=-2, y=10, z=-2},
+		    maxvel = {x=2, y=10, z=2},
+		    minacc = {x=0, y=-9.81, z=0},
+		    maxacc = {x=0, y=-9.81, z=0},
+		    minexptime = 1,
+		    maxexptime = 1.5,
+		    minsize = 5,
+		    maxsize = 5,
+		    texture = "blink_part.png",
+		})
+        
+            
+            itemstack:take_item()
+            return itemstack
+        end
+    end,
+})
+
+
+
+minetest.register_craftitem("forgotten_monsters:summon_golem", {
+    description = "Golem Summoning Book",
+    inventory_image = "summon_boock_golem.png", 
+
+    on_place = function(itemstack, placer, pointed_thing)
+        
+        if pointed_thing.type == "node" then
+            local pos = pointed_thing.above 
+    
+             local summon_pos = {x = pos.x, y = pos.y + 1, z = pos.z}
+        
+             minetest.add_entity(summon_pos, "forgotten_monsters:golem")
+             
+               -- PARTICULAS
+		minetest.add_particlespawner({
+		    amount = 30,
+		    time = 0.5,
+		    minpos = summon_pos,
+		    maxpos = summon_pos,
+		    minvel = {x=-2, y=10, z=-2},
+		    maxvel = {x=2, y=10, z=2},
+		    minacc = {x=0, y=-9.81, z=0},
+		    maxacc = {x=0, y=-9.81, z=0},
+		    minexptime = 1,
+		    maxexptime = 1.5,
+		    minsize = 5,
+		    maxsize = 5,
+		    texture = "blink_part.png",
+		})
+        
+            
+            itemstack:take_item()
+            return itemstack
+        end
+    end,
+})
+
+
+
+minetest.register_craftitem("forgotten_monsters:summon_sking", {
+    description = "Skull King Summoning Book",
+    inventory_image = "summon_boock_skullking.png", 
+
+    on_place = function(itemstack, placer, pointed_thing)
+        
+        if pointed_thing.type == "node" then
+            local pos = pointed_thing.above 
+    
+             local summon_pos = {x = pos.x, y = pos.y + 1, z = pos.z}
+        
+             minetest.add_entity(summon_pos, "forgotten_monsters:sking")
+             
+               -- PARTICULAS
+		minetest.add_particlespawner({
+		    amount = 30,
+		    time = 0.5,
+		    minpos = summon_pos,
+		    maxpos = summon_pos,
+		    minvel = {x=-2, y=10, z=-2},
+		    maxvel = {x=2, y=10, z=2},
+		    minacc = {x=0, y=-9.81, z=0},
+		    maxacc = {x=0, y=-9.81, z=0},
+		    minexptime = 1,
+		    maxexptime = 1.5,
+		    minsize = 5,
+		    maxsize = 5,
+		    texture = "blink_part.png",
+		})
+        
+            
+            itemstack:take_item()
+            return itemstack
+        end
+    end,
+})
 
 
 -- =========================================== BLOCOS :  ==========================================================
@@ -440,47 +700,3 @@ minetest.register_node("forgotten_monsters:buried_bone_block", {
 
 
 
---============================================= CONQUISTAS : =====================================================
---[[
-		if minetest.get_modpath("awards") then  
-		
-		   awards.register_award("boss_1", {
-			title = "First Boss , Mese Lord",
-			description = "Kill the first boss, get the trophy and unlock the next achievement...", 
-			icon = "mese_lord_award.png", 
-			background = "awards_bg_mining.png",
-			-- requires = {""},
-			prizes = {"forgotten_monsters:meselord_trophy"} ,
-			
-		})
-		
-		
-		
-	
-		  
-		   awards.register_award("boss_2", {
-			title = "Golem Boss",
-			description = "One more challenge ahead of you, defeat the Golem boss...", 
-			icon = "golem_award.png", 
-			background = "awards_bg_mining.png",
-			requires = {"boss_1"},
-			prizes = {"forgotten_monsters:golem_trophy"} ,
-			
-		})
-		
-		
-	
-		  
-		   awards.register_award("boss_3", {
-			title = "Skull King Boss",
-			description = "You've proven yourself strong enough, now defeat King Cave...", 
-			icon = "skullking_award.png", 
-			background = "awards_bg_mining.png",
-			requires = {"boss_2"},
-			prizes = {"forgotten_monsters:skullking_trophy"} ,
-			
-		})
-		
-		end
-		
-		]]

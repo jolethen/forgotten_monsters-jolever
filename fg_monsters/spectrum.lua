@@ -88,6 +88,9 @@ mobs:register_arrow("forgotten_monsters:spectrum_arrow", {
 	--rotate = 180,
 	damage = 2,
 	glow = 5,
+	
+	collisionbox = {-0.5,-0.5,-0.5, 0.5,0.5,0.5},
+        selectionbox = {-0.5,-0.5,-0.5, 0.5,0.5,0.5},
 
 
 	hit_player = function(self, player)

@@ -40,7 +40,7 @@ mobs:register_mob("forgotten_monsters:golem", {
 	drops = {
 		--{name = " ", chance = 2, min = 1, max = 1},
 		{name = "forgotten_monsters:golem_trophy", chance = 1, min = 1, max = 1},
-		--{name = "default:diamondblock", chance = 2, min = 1, max = 2},
+		{name = "forgotten_monsters:letter_queen", chance = 1, min = 1, max = 1},
 
 	},
 	water_damage = 0,

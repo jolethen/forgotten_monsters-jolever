@@ -24,7 +24,7 @@ mobs:register_mob("forgotten_monsters:sarchers", {
 		{"skull_arch.png"},
 	},
 	--glow = 4,
-	blood_texture = "bonex.png",
+	blood_texture = "buried_bone.png",
 	makes_footstep_sound = true,
 	sounds = {
 

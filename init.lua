@@ -26,6 +26,3 @@ dofile(path .. "/fg_recipes.lua")
 -- SPAWN : ===========================================
 dofile(path .. "/fg_spawn.lua")
 
---ORE : ===============================================
-
-dofile(path .. "/fg_summonses.lua")

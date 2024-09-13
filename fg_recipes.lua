@@ -79,37 +79,6 @@ minetest.register_craft({
 
 
 
--- CARNE DE GROWLER =============================================================================
-
-minetest.register_craftitem("forgotten_monsters:growler_meat_raw", {
-    description = "Growler Meat Raw",
-    inventory_image = "growler_meat_raw.png",
-    on_use = minetest.item_eat(-5),
-})
-
-minetest.register_craftitem("forgotten_monsters:growler_meat", {
-    description = "Growler Meat",
-    inventory_image = "growler_meat.png",
-    on_use = minetest.item_eat(5),
-})
-
-
-minetest.register_craft({
-	output = "forgotten_monsters:growler_meat",
-	type = "cooking",
-	recipe = "forgotten_monsters:growler_meat_raw",
-	cooktime = 4
-})
-
-
--- FOLHA  HUNGRY : ==============================================================================
-
-minetest.register_craftitem("forgotten_monsters:hungry_sheet", {
-    description = "Hungry Sheet",
-    inventory_image = "folha.png",
-
-
-})
 
 
 
@@ -137,35 +106,62 @@ minetest.register_craft({
 
 
 
--- SUMMONS NODES : ====================================================================================
+
+-- ITENS : ======================================================================================
 
 minetest.register_craft({
-	output = "forgotten_monsters:summon_golem",
+	output = "forgotten_monsters:crumpled_paper",
 	recipe = {
-		{"group:stone", "group:stone", "group:stone"},
-		{"group:stone", "forgotten_monsters:spectrum_orb_block", "group:stone"},
-		{"group:stone", "group:stone", "group:stone"},
+		{"", "group:leaves", ""}, 
+		{"", "group:leaves", ""}, 
+		{"", "group:leaves", ""},
 	}
 })
+
+
+
+minetest.register_craft({
+	output = "forgotten_monsters:fgbook",
+	recipe = {
+		{"forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper"},
+		{"forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper"},
+		{"forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper"},
+	}
+})
+
+
+
+-- SUMMONS NODES : ====================================================================================
 
 
 minetest.register_craft({
 	output = "forgotten_monsters:summon_mese_lord",
 	recipe = {
-		{"group:stone", "forgotten_monsters:spectrum_orb_block", "group:stone"},
-		{"forgotten_monsters:spectrum_orb_block", "forgotten_monsters:heart_of_mese", "forgotten_monsters:spectrum_orb_block"},
-		{"group:stone", "forgotten_monsters:spectrum_orb_block", "group:stone"},
+		{"forgotten_monsters:fgbook", "forgotten_monsters:fgbook", "forgotten_monsters:fgbook"},
+		{"forgotten_monsters:fgbook", "forgotten_monsters:spectrum_orb_block", "forgotten_monsters:fgbook"},
+		{"forgotten_monsters:fgbook", "forgotten_monsters:fgbook", "forgotten_monsters:fgbook"},
 	}
 })
+
+
+minetest.register_craft({
+	output = "forgotten_monsters:summon_golem",
+	recipe = {
+		{"forgotten_monsters:fgbook", "forgotten_monsters:spectrum_orb_block", "forgotten_monsters:fgbook"},
+		{"forgotten_monsters:fgbook", "forgotten_monsters:heart_of_mese", "forgotten_monsters:fgbook"},
+		{"forgotten_monsters:fgbook", "forgotten_monsters:spectrum_orb_block", "forgotten_monsters:fgbook"},
+	}
+})
+
 
 
 
 minetest.register_craft({
 	output = "forgotten_monsters:summon_sking",
 	recipe = {
-		{"group:stone", "forgotten_monsters:buried_bone_block", "group:stone"},
-		{"forgotten_monsters:buried_bone_block", "forgotten_monsters:eye_of_the_lord", "forgotten_monsters:buried_bone_block"},
-		{"group:stone", "forgotten_monsters:buried_bone_block", "group:stone"},
+		{"forgotten_monsters:fgbook", "forgotten_monsters:buried_bone_block", "forgotten_monsters:fgbook"},
+		{"forgotten_monsters:buried_bone_block", "forgotten_monsters:letter_queen", "forgotten_monsters:buried_bone_block"},
+		{"forgotten_monsters:fgbook", "forgotten_monsters:buried_bone_block", "forgotten_monsters:fgbook"},
 	}
 })
 

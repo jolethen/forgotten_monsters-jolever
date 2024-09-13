@@ -24,7 +24,7 @@ mobs:register_mob("forgotten_monsters:sword", {
 		{"skull_sword.png"},
 	},
 	--glow = 4,
-	blood_texture = "bonex.png",
+	blood_texture = "buried_bone.png",
 	makes_footstep_sound = true,
 	sounds = {
 		attack = "sword_skull",

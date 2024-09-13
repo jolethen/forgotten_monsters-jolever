@@ -42,7 +42,7 @@ mobs:register_mob("forgotten_monsters:meselord", {
 	floats = 0,
 	view_range = 40,
 	drops = {
-		--{name = "default:mese", chance = 2, min = 1, max = 2},
+	        {name = "forgotten_monsters:heart_of_mese", chance = 1, min = 1, max = 1},
 		{name = "forgotten_monsters:meselord_trophy", chance = 1, min = 1, max = 1},
 	},
 	water_damage = 0,

@@ -25,7 +25,7 @@ mobs:register_mob("forgotten_monsters:skull_berserker", {
 		{"skull_berserker.png"},
 	},
 	--glow = 4,
-	blood_texture = "bonex.png",
+	blood_texture = "buried_bone.png",
 	makes_footstep_sound = true,
 	sounds = {
 		attack = "axe_sound",
