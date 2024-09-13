@@ -1,15 +1,28 @@
 ### Itens
 ---
 ---
-- Bones , " Compatible with the mod : Bonemeal  ( By : TenPlus1 )"
+- Buried Bone , " Compatible with the mod : Bonemeal  ( By : TenPlus1 )"
 - Spectrum Orb ,  " Compatible with the mod : Return Mirror ( By : Wuzzy )"
-- Spectrum chest ( removed , will be added to another project )
 - Hungry Sheet
+- Old Bottle
 - Healing
+- Crumpled Paper
+- Forgotten Book
+---
+- Bones Pickaxe
+- Bones Shovel
+- Bones Axe
+- Bones Sword
+- Skull Kings Hammer
+---
+- Letter from the Queen
+- Heart of Mese
+- Mese Lord's Summoning Book
+- Golem Summoning Book
+- Skull King Summoning Book
+---
 - Mese Lord trophy
 - Golem trophy
 - Skull King trophy
-- Skull King's Hammer
-
 ---
 See the recipes [here](https://codeberg.org/pixelzone/zombies4test_reload/src/branch/main/zwiki/Recipes.md)  

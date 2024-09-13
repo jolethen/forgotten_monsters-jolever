@@ -441,7 +441,7 @@ minetest.register_craftitem("forgotten_monsters:healing", {
 	        minetest.add_particle({
 		pos = pos,
 		acceleration = 0,
-          	velocity = {x =math.random(-3,3),y=math.random(-3,3),z=math.random(-3,3)},
+        velocity = {x =math.random(-3,3),y=math.random(-3,3),z=math.random(-3,3)},
           	-- x ou y ,ou z  = random (-3 right , 3 left )
 		size = 2, 
 		expirationtime = 2.0,
@@ -571,7 +571,7 @@ minetest.register_craftitem("forgotten_monsters:heart_of_mese", {
 --- LIVRO DE INVOCÃO : ===========================================================================================
 
 minetest.register_craftitem("forgotten_monsters:summon_mese_lord", {
-    description = "Meze Lord's Summoning Book",
+    description = "Mese Lord's Summoning Book",
     inventory_image = "summon_boock_meselord.png", 
 
     on_place = function(itemstack, placer, pointed_thing)
