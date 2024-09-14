@@ -1,6 +1,7 @@
 local path = minetest.get_modpath("forgotten_monsters")
 
 
+dofile(path .. "/fg_starting_items.lua")
 
 -- MONSTERS ; =========================================
 

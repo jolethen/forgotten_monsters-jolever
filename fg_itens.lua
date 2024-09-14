@@ -483,7 +483,7 @@ minetest.register_craftitem("forgotten_monsters:crumpled_paper", {
 
 -- BOOK : ======================================================================================================= Livro
 
-local book_txt = [[
+local book_txt = core.colorize("#000000", [[
 
 Welcome to your new journey,
 of adventures, explorations and battles.
@@ -493,7 +493,7 @@ The bosses, Golem and Mese Lord, drop useful items
 for the recipes of the books.
 
 Have fun!!!
-]]
+]])
 
 minetest.register_craftitem("forgotten_monsters:fgbook", {
     description = "Forgotten Book",
@@ -519,7 +519,7 @@ minetest.register_craftitem("forgotten_monsters:fgbook", {
 
 -- letter from the queen : ======================================================================================= Carta
 
-local letter_label = [[ 
+local letter_label = core.colorize("#000000",[[ 
 
                                                    							My dear,
 
@@ -534,7 +534,7 @@ local letter_label = [[
 		                                          			         Your Queen.
 
 
-]]
+]])
 
 
 minetest.register_craftitem("forgotten_monsters:letter_queen", {
