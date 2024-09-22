@@ -140,12 +140,16 @@ end
 minetest.register_craftitem("forgotten_monsters:growler_meat_raw", {
     description = "Growler Meat Raw",
     inventory_image = "growler_meat_raw.png",
+    _rp_hunger_food = -5,
+    _rp_hunger_sat = -5, 
     on_use = minetest.item_eat(-5),
 })
 
 minetest.register_craftitem("forgotten_monsters:growler_meat", {
     description = "Growler Meat",
     inventory_image = "growler_meat.png",
+    _rp_hunger_food = 5,
+    _rp_hunger_sat = 5,
     on_use = minetest.item_eat(5),
 })
 
