@@ -70,7 +70,7 @@ mobs:register_mob("forgotten_monsters:sking", {
 	
 	 local current_time = minetest.get_us_time() -- tempo atual mas emmicro segundos
 	 
-	  if current_time - last_attack >= 2 * (10^6)  then 
+	  if current_time - last_attack >= 4 * (10^6)  then 
 		last_attack = current_time 
 		
 	        
@@ -92,7 +92,7 @@ mobs:register_mob("forgotten_monsters:sking", {
 		                		
 		        
 		        self.object:set_animation({x=100, y=120},35, 1, false)      				
-			self.attack:set_pos({x=pp.x+5,y=pp.y+5,z=pp.z})     
+			self.attack:set_pos({x=pp.x+5,y=pp.y+2,z=pp.z})     
 			minetest.sound_play("monster", {pos = pos, gain = 0.5})
 				   
 		 end

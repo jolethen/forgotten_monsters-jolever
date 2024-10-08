@@ -69,7 +69,7 @@ mobs:register_mob("forgotten_monsters:golem", {
 	
 	 local current_time = minetest.get_us_time() -- tempo atual mas emmicro segundos
 	 
-	  if current_time - last_attack >= 3 * (10^6)  then 
+	  if current_time - last_attack >= 2 * (10^6)  then 
 		last_attack = current_time 
 		
 	        
@@ -91,7 +91,7 @@ mobs:register_mob("forgotten_monsters:golem", {
 		                		
 		        
 		        self.object:set_animation({x=140, y=180},15, 1, false)      				
-			self.attack:set_pos({x=pp.x+5,y=pp.y+5,z=pp.z})     
+			self.attack:set_pos({x=pp.x+5,y=pp.y+3,z=pp.z})     
 			minetest.sound_play("monster", {pos = pos, gain = 0.5})
 				   
 		 end

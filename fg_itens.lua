@@ -538,7 +538,7 @@ minetest.register_craftitem("forgotten_monsters:fgbook", {
     description = "Forgotten Book",
     inventory_image = "forgotten_book.png",
     stack_max = 1,
-    groups = {vessel = 1},
+    groups = {book = 1},
     
     on_use = function(itemstack, user, pointed_thing, pos)
         local player_name = user:get_player_name()
