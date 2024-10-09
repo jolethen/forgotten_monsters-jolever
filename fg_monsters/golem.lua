@@ -91,8 +91,8 @@ mobs:register_mob("forgotten_monsters:golem", {
 		                		
 		        
 		        self.object:set_animation({x=140, y=180},15, 1, false)      				
-			self.attack:set_pos({x=pp.x+5,y=pp.y+3,z=pp.z})     
-			minetest.sound_play("monster", {pos = pos, gain = 0.5})
+			self.attack:set_pos({x=pp.x+5,y=pp.y+3,z=pp.z})     			
+			minetest.sound_play("impact_golem", {pos = pos, gain = 0.5})
 				   
 		 end
 	    end
@@ -125,7 +125,7 @@ mobs:register_mob("forgotten_monsters:golem", {
             maxsize = 8,
             collisiondetection = false,
             vertical = false, 
-            texture = "tnt_smoke.png", 
+            texture = "part_spawn_golem.png", 
             glow = 14, 
         })
 

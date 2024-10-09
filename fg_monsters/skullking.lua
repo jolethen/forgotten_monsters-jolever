@@ -1,5 +1,6 @@
 ---- SKULL KING  ( BOSS FINAL ) ------------------------------------------------------------------------------------------------------
 -- sound attack : https://freesound.org/people/TomRonaldmusic/sounds/607201/
+-- sound hummer : https://freesound.org/people/TomRonaldmusic/sounds/607201/
 
  local last_attack = 0
  
@@ -61,10 +62,13 @@ mobs:register_mob("forgotten_monsters:sking", {
 
 	},
 
-
+       
+        --[[
 	on_spawn = function ()
-	minetest.chat_send_all ("The Skull King is reborn...")
+	--minetest.chat_send_all ("The Skull King is reborn...")
 	end,
+	]]
+	
 	
 	custom_attack = function(self, to_attack)
 	
@@ -93,7 +97,7 @@ mobs:register_mob("forgotten_monsters:sking", {
 		        
 		        self.object:set_animation({x=100, y=120},35, 1, false)      				
 			self.attack:set_pos({x=pp.x+5,y=pp.y+2,z=pp.z})     
-			minetest.sound_play("monster", {pos = pos, gain = 0.5})
+			minetest.sound_play("air_impact", {pos = pos, gain = 0.5})
 				   
 		 end
 	    end
@@ -129,7 +133,7 @@ mobs:register_mob("forgotten_monsters:sking", {
             maxsize = 6,
             collisiondetection = false,
             vertical = false, 
-            texture = "tnt_smoke.png", 
+            texture = "part_spawn_king.png", 
             glow = 14, 
         })
 

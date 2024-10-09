@@ -623,21 +623,33 @@ minetest.register_craftitem("forgotten_monsters:summon_mese_lord", {
              minetest.add_entity(summon_pos, "forgotten_monsters:meselord")
              
                -- PARTICULAS
+               for px = 1,3 do
+                for py = 1,5 do
+                 for pz = 1,3 do
+                 
+                 
 		minetest.add_particlespawner({
-		    amount = 30,
+		    amount = 1,
 		    time = 0.5,
-		    minpos = summon_pos,
-		    maxpos = summon_pos,
-		    minvel = {x=-2, y=10, z=-2},
-		    maxvel = {x=2, y=10, z=2},
-		    minacc = {x=0, y=-9.81, z=0},
-		    maxacc = {x=0, y=-9.81, z=0},
+		    minpos = {x = pos.x + px, y = pos.y + py, z = pos.z + pz},
+		    maxpos = {x = pos.x - px, y = pos.y - py, z = pos.z - pz},
+		    
+		    minvel = {x=0, y= 1, z=0},
+		    maxvel = {x=0, y= 1, z=0},
+		    
+		    minacc = {x=0, y= 0, z=0},
+		    maxacc = {x=0, y= 0, z=0},
+		    
 		    minexptime = 1,
 		    maxexptime = 1.5,
 		    minsize = 5,
-		    maxsize = 5,
-		    texture = "blink_part.png",
+		    maxsize = 3,
+		    texture = "part_spawn_lord.png",
 		})
+		
+		end
+	       end
+	     end
         
             
             itemstack:take_item()
@@ -662,21 +674,34 @@ minetest.register_craftitem("forgotten_monsters:summon_golem", {
              minetest.add_entity(summon_pos, "forgotten_monsters:golem")
              
                -- PARTICULAS
+		
+               for px = 1,3 do
+                for py = 1,5 do
+                 for pz = 1,3 do
+                 
+                 
 		minetest.add_particlespawner({
-		    amount = 30,
+		    amount = 1,
 		    time = 0.5,
-		    minpos = summon_pos,
-		    maxpos = summon_pos,
-		    minvel = {x=-2, y=10, z=-2},
-		    maxvel = {x=2, y=10, z=2},
-		    minacc = {x=0, y=-9.81, z=0},
-		    maxacc = {x=0, y=-9.81, z=0},
+		    minpos = {x = pos.x + px, y = pos.y + py, z = pos.z + pz},
+		    maxpos = {x = pos.x - px, y = pos.y - py, z = pos.z - pz},
+		    
+		    minvel = {x=0, y= 1, z=0},
+		    maxvel = {x=0, y= 1, z=0},
+		    
+		    minacc = {x=0, y= 0, z=0},
+		    maxacc = {x=0, y= 0, z=0},
+		    
 		    minexptime = 1,
 		    maxexptime = 1.5,
 		    minsize = 5,
-		    maxsize = 5,
-		    texture = "blink_part.png",
+		    maxsize = 3,
+		    texture = "part_spawn_golem.png",
 		})
+		
+		end
+	       end
+	     end
         
             
             itemstack:take_item()
@@ -700,22 +725,35 @@ minetest.register_craftitem("forgotten_monsters:summon_sking", {
         
              minetest.add_entity(summon_pos, "forgotten_monsters:sking")
              
-               -- PARTICULAS
+                 -- PARTICULAS
+		
+               for px = 1,3 do
+                for py = 1,5 do
+                 for pz = 1,3 do
+                 
+                 
 		minetest.add_particlespawner({
-		    amount = 30,
+		    amount = 1,
 		    time = 0.5,
-		    minpos = summon_pos,
-		    maxpos = summon_pos,
-		    minvel = {x=-2, y=10, z=-2},
-		    maxvel = {x=2, y=10, z=2},
-		    minacc = {x=0, y=-9.81, z=0},
-		    maxacc = {x=0, y=-9.81, z=0},
+		    minpos = {x = pos.x + px, y = pos.y + py, z = pos.z + pz},
+		    maxpos = {x = pos.x - px, y = pos.y - py, z = pos.z - pz},
+		    
+		    minvel = {x=0, y= 1, z=0},
+		    maxvel = {x=0, y= 1, z=0},
+		    
+		    minacc = {x=0, y= 0, z=0},
+		    maxacc = {x=0, y= 0, z=0},
+		    
 		    minexptime = 1,
 		    maxexptime = 1.5,
 		    minsize = 5,
-		    maxsize = 5,
-		    texture = "blink_part.png",
+		    maxsize = 3,
+		    texture = "part_spawn_king.png",
 		})
+		
+		end
+	       end
+	     end
         
             
             itemstack:take_item()

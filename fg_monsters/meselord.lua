@@ -19,7 +19,7 @@ mobs:register_mob("forgotten_monsters:meselord", {
 	hp_max = 300,
 	armor = 80,
 	visual = "mesh",
-	visual_size = {x = 17, y = 17},
+	visual_size = {x = 18, y = 18},
 	mesh = "mese_guardian.b3d",
 	collisionbox = {-1.0, -0.8, -1.0, 1.0, 1.0, 1.0},
 	--rotate = 180,
@@ -30,6 +30,7 @@ mobs:register_mob("forgotten_monsters:meselord", {
 	blood_texture = "default_mese_crystal_fragment.png",
 	sounds = {
 		random = "mese_lord",
+		shoot_attack = "lord_mese_shot"
 		--death = "",
 	},
 
@@ -94,7 +95,7 @@ mobs:register_mob("forgotten_monsters:meselord", {
             maxsize = 8,
             collisiondetection = false,
             vertical = false, 
-            texture = "tnt_smoke.png", 
+            texture = "part_spawn_lord.png", 
             glow = 14, 
         })
 
