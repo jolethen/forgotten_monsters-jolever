@@ -480,7 +480,7 @@ minetest.register_craftitem("forgotten_monsters:healing", {
 	        minetest.add_particle({
 		pos = pos,
 		acceleration = 0,
-        velocity = {x =math.random(-3,3),y=math.random(-3,3),z=math.random(-3,3)},
+                velocity = {x =math.random(-3,3),y=math.random(-3,3),z=math.random(-3,3)},
           	-- x ou y ,ou z  = random (-3 right , 3 left )
 		size = 2, 
 		expirationtime = 2.0,
