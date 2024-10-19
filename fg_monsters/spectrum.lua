@@ -138,7 +138,6 @@ minetest.register_node("forgotten_monsters:spectrum_orb_block", {
 	groups = {cracky = 2,pickaxey=2},
 	_mcl_hardness = 1,
 	_mcl_blast_resistance = 2,
-	drop = "forgotten_monsters:spectrum_orb_block",
 	light_source = 6,
         --sounds = default.node_sound_stone_defaults(),
 	tiles = {{
