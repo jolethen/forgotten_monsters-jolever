@@ -1,5 +1,10 @@
 # textdomain: forgotten_monsters
-
+Skull King crown=
+Bones Helmet=
+Bones Chestplate=
+Bones Leggings=
+Bones Boots=
+Bones Shield=
 Growler Meat Raw=
 Growler Meat=
 Hungry Sheet=
