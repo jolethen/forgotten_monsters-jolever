@@ -11,12 +11,6 @@ core.register_craft({
 	cooktime = 4
 })
 
--- Growler Leather
-core.register_craftitem("forgotten_monsters:growler_leather", {
-    description = "Growler Leather",
-    inventory_image = "Growler_Leather.png",
-})
-
 -- FOLHA  HUNGRY : ===============================================================================================
 core.register_craftitem("forgotten_monsters:hungry_sheet", {
     description = S("Hungry Sheet"),
@@ -229,8 +223,7 @@ core.register_craft({
     type = "shapeless",
     output = "bonemeal:bonemeal",
     recipe = {
-        "forgotten_monsters:buried_bone",
-        
+        "forgotten_monsters:buried_bone",  
     },
 })
 
@@ -241,8 +234,7 @@ core.register_craft({
     type = "shapeless",
     output = "mcl_bone_meal:bone_meal",
     recipe = {
-        "forgotten_monsters:buried_bone",
-        
+        "forgotten_monsters:buried_bone",   
     },
 })
 

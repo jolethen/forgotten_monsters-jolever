@@ -83,20 +83,11 @@ core.register_craft({
 
 -- ITENS : ======================================================================================
 core.register_craft({
-	output = "forgotten_monsters:crumpled_paper",
+	output = "forgotten_monsters:fgbook",
 	recipe = {
 		{"", "group:leaves", ""}, 
 		{"", "group:leaves", ""}, 
 		{"", "group:leaves", ""},
-	}
-})
-
-core.register_craft({
-	output = "forgotten_monsters:fgbook",
-	recipe = {
-		{"forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper"},
-		{"forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper"},
-		{"forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper", "forgotten_monsters:crumpled_paper"},
 	}
 })
 
