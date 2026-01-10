@@ -45,7 +45,7 @@ mobs:register_mob("forgotten_monsters:sking", {
 	die_rotate = true,
 	-------------------------
 	drops = {
-		{name = "forgotten_monsters:hammer", chance = 10, min = 1, max = 1},
+		{name = "forgotten_monsters:hammer", chance = 5, min = 1, max = 1},
 		--{name = "forgotten_monsters:skullking_trophy", chance = 1, min = 1, max = 1},
 		{name = "forgotten_monsters:helmet_skullking", chance = 1, min = 1, max = 1},
 	},
@@ -74,17 +74,14 @@ mobs:register_mob("forgotten_monsters:sking", {
 	},
 	
 	after_activate = function(self, staticdata, def, dtime)
+	  local pos_boss = tostring(self.object:get_pos())
+	  
 	  if core.get_modpath("mcl_armor") then
 	   self.damage = 4
-	   --core.log(tostring( self.damage))
-         end
+          end
+
 	end,
 	
-	do_custom = function(self, dtime)
-	  local health = self.health / 0.5 
-	  fg_hud_boss(self,dtime,"Skull_King",health,"Skull King","boss_bar1.png",1,25)  
-	end,
-		
 	custom_attack = function(self, to_attack)	
 	 local current_time = core.get_us_time()	 
 	  if current_time - last_attack >= 4 * (10^6)  then 
@@ -122,7 +119,6 @@ mobs:register_mob("forgotten_monsters:sking", {
 	end,
 		
 	on_die = function(self, pos) 
-	    remover_fg_hud_boss(self,dtime)
 	    part_summon (pos)
 	end
 })

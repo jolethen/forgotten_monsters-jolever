@@ -6,7 +6,11 @@ dofile(path .. "/fg_starting_items.lua")
 dofile(path .. "/fg_decoration.lua")
 -- MONSTERS ; =========================================
 dofile(path .. "/fg_part.lua")
+
+if core.get_modpath("boss_s_hudbar") then 
 dofile(path .. "/fg_bar.lua")
+end
+
 dofile(path.."/fg_monsters/skullarchers.lua")
 dofile(path.."/fg_monsters/skull_berserker.lua")
 dofile(path.."/fg_monsters/skullsword.lua")

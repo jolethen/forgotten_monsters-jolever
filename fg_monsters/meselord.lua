@@ -73,14 +73,8 @@ mobs:register_mob("forgotten_monsters:meselord", {
 		shoot_start = 120,
 		shoot_end = 160,
 	},
-
-	do_custom = function(self, dtime)
-	  local health = self.health / 0.25 
-	  fg_hud_boss(self,dtime,"Mese_Lord",health,"Mese Lord","boss_bar2.png",1,25)  
-	end,
-	
+        
 	on_die = function(self, pos) 
-	    remover_fg_hud_boss(self,dtime)	
 	    part_summon (pos)
 	end
 	
@@ -105,8 +99,7 @@ mobs:register_arrow("forgotten_monsters:meselord_arrow", {
 	   self.damage = 7
 	    
 	  if core.get_modpath("mcl_armor") then
-	    self.damage = 2
-	   -- core.log(tostring( self.damage))	  
+	    self.damage = 2	  
           end
           
 	end,

@@ -65,17 +65,14 @@ mobs:register_mob("forgotten_monsters:golem", {
 		punch_end = 180,
 	},
         
-        after_activate = function(self, staticdata, def, dtime)
+	after_activate = function(self, staticdata, def, dtime)
+	  local pos_boss = tostring(self.object:get_pos())
+	  
 	  if core.get_modpath("mcl_armor") then
-	   self.damage = 3	  
-          end
+	   self.damage = 3
+         end
 	end,
-	
-        do_custom = function(self, dtime)
-	  local health = self.health / 0.4 
-	  fg_hud_boss(self,dtime,"Skull_King",health,"Dark Golem","boss_bar3.png",1,25)  
-	end,
-	
+
 	custom_attack = function(self, to_attack)	
 	 local current_time = core.get_us_time()
 	 
@@ -105,8 +102,7 @@ mobs:register_mob("forgotten_monsters:golem", {
 	     end	
 	end,
 
-	on_die = function(self, pos) 
-	    remover_fg_hud_boss(self,dtime)	
+	on_die = function(self, pos) 	
             part_summon (pos)
 	end
 })
