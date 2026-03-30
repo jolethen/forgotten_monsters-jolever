@@ -1,4 +1,10 @@
 -- TOLOLS : ======================================================================================
+if core.get_modpath("default") then
+core.override_item("default:glass", {
+groups = {cracky = 3, oddly_breakable_by_hand = 3,glass = 1},
+})
+end
+
 core.register_craft({
   output = "forgotten_monsters:pick_bones",
   recipe = {

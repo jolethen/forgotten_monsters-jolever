@@ -1,4 +1,4 @@
-minetest.register_node("forgotten_monsters:forgotten_flower", { -- nome 
+core.register_node("forgotten_monsters:forgotten_flower", { -- nome 
     description ="Forgotten Flower",
     drawtype = "plantlike",
     tiles = {"forgotten_flower.png"}, -- textura
@@ -16,7 +16,7 @@ minetest.register_node("forgotten_monsters:forgotten_flower", { -- nome
     },
 })
 
-minetest.register_decoration({
+core.register_decoration({
     deco_type = "simple",
     place_on = {"mcl_core:dirt_with_grass","default:dirt_with_grass","default:dirt_with_rainforest_litter"},
     sidelen = 16,
@@ -29,6 +29,6 @@ minetest.register_decoration({
     decoration = "forgotten_monsters:forgotten_flower",
 })
 
-if minetest.get_modpath("flowerpot") then
+if core.get_modpath("flowerpot") then
  flowerpot.register_node("forgotten_monsters:forgotten_flower")
 end

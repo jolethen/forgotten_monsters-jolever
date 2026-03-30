@@ -87,7 +87,7 @@ mobs:register_mob("forgotten_monsters:sking", {
 	  if current_time - last_attack >= 4 * (10^6)  then 
 		last_attack = current_time 
 			        
-	   	for _, player in ipairs(core.get_connected_players()) do
+	   	--for _, player in ipairs(core.get_connected_players()) do
 				     				     
 			local attached = self.attack:get_attach()
 			local pp = self.attack:get_pos()
@@ -113,7 +113,7 @@ mobs:register_mob("forgotten_monsters:sking", {
 				self.object:set_animation({x=20, y=60},15, 1, false)   			
 			end)
 				   
-		 end
+		 --end
 	    end
 	
 	end,

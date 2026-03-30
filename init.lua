@@ -36,5 +36,3 @@ if core.get_modpath("mcl_armor") then
 dofile(path .. "/fg_armors/fg_armors_mcl.lua")
 end
 
-
-

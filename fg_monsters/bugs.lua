@@ -63,7 +63,7 @@ core.register_craftitem("forgotten_monsters:bug_meat", {
 	inventory_image = "Bug_Meat.png",
 	_rp_hunger_food = 10,
         _rp_hunger_sat = 10, 
-	on_use = minetest.item_eat(10),
+	on_use = core.item_eat(10),
 })
 
 if core.get_modpath("hunger_ng") ~= nil then

@@ -1,5 +1,5 @@
 function part_summon (pos) 
-minetest.add_particlespawner({
+core.add_particlespawner({
     amount = 50,
     time = 1.5,
     minpos = {x=pos.x + 3, y=pos.y + -1, z=pos.z + 3},
@@ -18,7 +18,7 @@ minetest.add_particlespawner({
     glow = 14,
 })
 -- https://freesound.org/people/julianmateo_/sounds/522699/
-minetest.sound_play("summon_boss", {
+core.sound_play("summon_boss", {
         pos = pos,
         max_hear_distance = 20,
         gain = 2.5,
@@ -26,7 +26,7 @@ minetest.sound_play("summon_boss", {
 end
 
 function part_sking (pos) 
-minetest.add_particlespawner({
+core.add_particlespawner({
     amount = 10,
     time = 0.5,
     minpos = {x=pos.x + 3, y=pos.y + -1, z=pos.z + 3},

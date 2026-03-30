@@ -57,7 +57,7 @@ mobs:register_mob("forgotten_monsters:ssword", {
 		walk_end = 70,
 		run_start = 80,
 		run_end = 90,
-	},
+	},	
 })
 
 mobs:register_egg("forgotten_monsters:ssword", "Skull Sword", "eggsskullsword.png", 1)

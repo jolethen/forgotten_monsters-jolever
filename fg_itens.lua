@@ -149,7 +149,7 @@ core.register_node("forgotten_monsters:hammer", {
 })
  --========================================== TROFEU : =========================================================
  -- == MESE LORD :
- core.register_node("forgotten_monsters:meselord_trophy", {
+core.register_node("forgotten_monsters:meselord_trophy", {
 	description = S("Mese Lord Trophy"),
 	drawtype = "mesh",
 	mesh = "trofeus_fm.obj",
@@ -190,7 +190,6 @@ core.register_node("forgotten_monsters:golem_trophy", {
 			},
 		},	
 })
-
 -- === SKULL KING :
 core.register_node("forgotten_monsters:skullking_trophy", {
 	description = S("Skull King Trophy"),
@@ -348,9 +347,8 @@ core.register_craftitem("forgotten_monsters:letter_queen", { -- ENCONTRATDO NO F
             "style_type[label;textcolor=#0d1523]"..       
             "label[0.2,0.5;"..letter_label.."\n"..letter_label2.."\n"..letter_label3.."\n"..letter_label4.."\n"..letter_label5.."\n"..letter_label6.."\n"..letter_label7.."\n\n"..letter_label8.."]"..
             "background[-2,-0.5;13,7;letter_bg.png;false]"
-        
-       
-        core.show_formspec(player_name, "forgotten_monsters:letter", formspec_letter)
+
+             core.show_formspec(player_name, "forgotten_monsters:letter", formspec_letter)
         --return itemstack
     end
 })
@@ -358,14 +356,12 @@ core.register_craftitem("forgotten_monsters:letter_queen", { -- ENCONTRATDO NO F
 --- CORAÇÃO DE MESE e Eye of the golem : =============================================================================================
 core.register_craftitem("forgotten_monsters:heart_of_mese", {
     description = S("Heart of Mese"),
-    inventory_image = "heart_of_mese.png",
- 	
+    inventory_image = "heart_of_mese.png",	
 })
 
 core.register_craftitem("forgotten_monsters:eye_of_the_golem", {
     description = "Eye of the Golem", -- falta tradução
-    inventory_image = "Eye_of_the_golem.png",
- 	
+    inventory_image = "Eye_of_the_golem.png", 	
 })
 --- LIVRO DE INVOCÃO : ===========================================================================================
 core.register_craftitem("forgotten_monsters:summon_mese_lord", {
@@ -437,7 +433,7 @@ core.register_node("forgotten_monsters:buried_bone_block", {
     drop = "forgotten_monsters:buried_bone_block",      
 })
 --========================================== NEW TOOLS 2025: ======================================================
-minetest.register_tool("forgotten_monsters:forgotten_sword", {
+core.register_tool("forgotten_monsters:forgotten_sword", {
 	description = "Forgotten Sword",
 	inventory_image = "forgotten_sword.png",
 	_mcl_toollike_wield = true,
@@ -454,7 +450,7 @@ minetest.register_tool("forgotten_monsters:forgotten_sword", {
 	groups = {sword = 1,weapon = 1,enchantability = 10, fire_immune = 1}
 })
 
-minetest.register_tool("forgotten_monsters:spine_sword", {
+core.register_tool("forgotten_monsters:spine_sword", {
 	description = "Spine Sword",
 	inventory_image = "Spine_sword.png",
 	_mcl_toollike_wield = true,

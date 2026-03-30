@@ -128,7 +128,7 @@ core.register_tool("forgotten_monsters:translocation_rod", {
         local pos = user:get_pos()
       
         if pointed_thing and pointed_thing.type == "node" then
-	    local node = minetest.get_node(pointed_thing.under)
+	    local node = core.get_node(pointed_thing.under)
 	    if node.name ~= "air" then
 		return -- core.log("n ar")
 	    end
@@ -141,11 +141,11 @@ core.register_tool("forgotten_monsters:translocation_rod", {
             y = pos.y + dir.y * 15,
             z = pos.z + dir.z * 15
         }
-        local node = minetest.get_node(target)
+        local node = core.get_node(target)
         if node and node.name == "air" then
             user:set_pos(target)
             for i = 1, 10 do
-                minetest.add_particle({
+                core.add_particle({
                     pos = {x = target.x + math.random(-0.5,0.5), y = target.y + 1, z = target.z + math.random(-0.5,0.5)},
                     velocity = {x = math.random(-1,1), y = math.random(1,3), z = math.random(-1,1)},
                     acceleration = {x = 0, y = -2, z = 0},
