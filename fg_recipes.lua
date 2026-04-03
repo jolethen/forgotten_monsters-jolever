@@ -56,7 +56,7 @@ core.register_craft({
   recipe = {
     {"", "", ""},
     {"", "forgotten_monsters:hungry_sheet", ""},
-    {"", "forgotten_monsters:old_bottle", ""}
+    {"forgotten_monsters:old_bottle", "forgotten_monsters:old_bottle", "forgotten_monsters:old_bottle"}
   }
 })
 -- NODES : ======================================================================================
