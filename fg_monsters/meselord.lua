@@ -23,7 +23,7 @@ mobs:register_mob("forgotten_monsters:meselord", {
 	visual = "mesh",
 	visual_size = {x = 8, y = 8},
 	mesh = "mese_guardian.b3d",
-	collisionbox = {-1.0, -2.0, -1.0, 1.0, 1.5, 1.0},
+	collisionbox = {-1.0, -2.0, -1.0, 1.0, 1.7, 1.0},
 	textures = {
 		{"mese_guardian.png"},
 	},
@@ -51,7 +51,12 @@ mobs:register_mob("forgotten_monsters:meselord", {
 	knock_back = false,
 	die_rotate = true,
 	-------------------------
-	--drops = {},
+	drops = {
+	  {name = "forgotten_monsters:heart_of_mese", chance = 1, min = 1, max = 1},
+	  --{name = "forgotten_monsters:meselord_trophy", chance = 1, min = 1, max = 1},
+	  {name = "forgotten_monsters:forgotten_staff", chance = 10, min = 1, max = 1},
+	},
+	----------------------
 	water_damage = 0,
 	lava_damage = 0,
 	light_damage = 0,
