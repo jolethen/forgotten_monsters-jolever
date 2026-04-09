@@ -8,6 +8,9 @@ mobs:register_mob("forgotten_monsters:golem", {
 	attack_type = "dogshoot",
 	shoot_interval = 3,
 	shoot_offset = 1.9,
+	dogshoot_switch = 1,
+	dogshoot_count_max = 2, 
+	dogshoot_count2_max = 2, 
 	arrow = "forgotten_monsters:dark_stone_arrow",
 	pathfinding = true,
 	reach = 6,
@@ -75,7 +78,7 @@ mobs:register_mob("forgotten_monsters:golem", {
 		die_start = 155,
 		die_end = 180,
 		die_speed = 20,
-		die_loop = false,
+		--die_loop = false,
 	},
         
 	after_activate = function(self, staticdata, def, dtime)
